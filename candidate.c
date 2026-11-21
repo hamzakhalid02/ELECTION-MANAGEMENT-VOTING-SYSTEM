@@ -1,10 +1,10 @@
 // candidate.c - Student 3 - Candidate Management
 #include "common.h"
 
-int findCandidateByID(int id) {
-    Candidate *ptr = candidates;
+int findCandidateByID(int id) { // function declared
+    Candidate *ptr = candidates; // We create a pointer named ptr that points to the first candidate in the candidates array.
     for (int i = 0; i < candidateCount; i++) {
-        if ((ptr + i)->candidateID == id) return i;
+        if ((ptr + i)->candidateID == id) return i;//access element individually and check weather candidate id = our id
     }
     return -1;
 }
